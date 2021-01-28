@@ -13,7 +13,7 @@
           <a class="nav-link" id="entertainment-tab" @click="getData" data-news="entertainment" data-toggle="tab" href="#entertainment" role="tab" aria-controls="entertainment" aria-selected="false">娛樂</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="nation-tab" @click="getData" data-news="nation" data-toggle="tab" href="#nation" role="tab" aria-controls="nation" aria-selected="false">國際</a>
+          <a class="nav-link" id="world-tab" @click="getData" data-news="world" data-toggle="tab" href="#world" role="tab" aria-controls="world" aria-selected="false">國際</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="health-tab" @click="getData" data-news="health" data-toggle="tab" href="#health" role="tab" aria-controls="health" aria-selected="false">健康</a>
@@ -95,9 +95,9 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="nation" role="tabpanel" aria-labelledby="nation-tab">
+        <div class="tab-pane fade" id="world" role="tabpanel" aria-labelledby="world-tab">
           <div class="row" v-if="isLoaded">
-            <div class="col-12 col-md-6 my-3" v-for="(news, index) in articles['nation']" :key="index">
+            <div class="col-12 col-md-6 my-3" v-for="(news, index) in articles['world']" :key="index">
               <a :href="news.url" target="_blank" class="news-box d-flex">
                 <div class="thumbnail">
                   <img :src="news.image" alt="thumbnail">
@@ -252,7 +252,7 @@ export default {
         breaking: {},
         business: {},
         entertainment: {},
-        nation: {},
+        world: {},
         health: {},
         science: {},
         sports: {},
